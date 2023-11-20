@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Cell from './components/Cell';
+import getMatrix from './getMatrix';
 
 function App() {
+  const LEN = 24;
+  const [matrix, setMatrix] = useState(getMatrix(LEN));
+
+  const handleCell = (i, j) => {
+    let newMatrix = [...matrix];
+    newMatrix[i][j].state = true;
+    setMatrix(newMatrix);
+  }
+
+  const styleMatrix = {
+    gridTemplateColumns: `repeat(${LEN}, 20px)`,
+    gridTemplateRows: `repeat(${LEN}, 20px)`
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section style={styleMatrix}>
+        {matrix.map((array, i) => {
+          return array.map( (cell, j) => {
+            return <Cell key={`${i}${j}`} state={cell.state} simbol={cell.simbol} click={() => handleCell(i, j)} />
+          })
+        })}
+      </section>
     </div>
   );
 }
