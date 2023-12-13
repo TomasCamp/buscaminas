@@ -13,21 +13,21 @@ export default function Game({len, handleCheck}) {
     }
 
     const styleMatrix = {
-        gridTemplateColumns: `repeat(${len}, 20px)`,
-        gridTemplateRows: `repeat(${len}, 20px)`,
-        userSelect: "none"
+        gridTemplateColumns: `repeat(${len}, ${500/len}px)`,
+        gridTemplateRows: `repeat(${len}, ${500/len}px)`,
+        userSelect: "none",
+        height: "500px",
+        width: "500px"
     }
 
     return (
-        <div className="App">
         <section style={styleMatrix}>
-            {matrix.map((array, i) => {
-            return array.map( (cell, j) => {
-                return <Cell key={`${i}${j}`} state={cell.state} simbol={cell.simbol} click={() => handleCell(i, j, handleCheck)} />
-            })
-            })}
-        </section>
-        </div>
+        {matrix.map((array, i) => {
+        return array.map( (cell, j) => {
+            return <Cell key={`${i}${j}`} state={cell.state} simbol={cell.simbol} click={() => handleCell(i, j, handleCheck)} />
+        })
+        })}
+    </section>
     )
     
 }

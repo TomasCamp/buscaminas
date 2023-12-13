@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Menu.css"
 
 export default function Menu({handle}) {
     const [difficulty, setDifficulty] = useState(8)

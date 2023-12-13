@@ -25,8 +25,10 @@ function App() {
   console.log(play)
 
   return(
-    play ? <Game len={len} handleCheck={handleCheck} /> 
-    : <Menu handle={handleMenu}/>
+    <div className="App">
+        {play ? <Game len={len} handleCheck={handleCheck} /> 
+        : <Menu handle={handleMenu}/>}
+    </div>
   )
 }
 export default App;

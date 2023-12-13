@@ -1,4 +1,4 @@
-import "./Cell.css";
+import "./Cell.css"
 
 function Cell({state, simbol, click}) {
     return( 
