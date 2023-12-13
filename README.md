@@ -13,5 +13,5 @@ Este proyecto busca recrear el juego Buscaminas, para ejercitar las siguientes t
 - Perder si se activa una bomba.
 - Mostrar todas las bombas.
 - Esparcimiento del pulso.
-- Menú del juego.
+- Estilizar menu.
 - Puntaje por tiempo.
