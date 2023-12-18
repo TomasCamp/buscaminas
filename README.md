@@ -10,7 +10,6 @@ Este proyecto busca recrear el juego Buscaminas, para ejercitar las siguientes t
 
 
 ## Lista de tareas:
-- Perder si se activa una bomba.
 - Mostrar todas las bombas.
 - Esparcimiento del pulso.
 - Puntaje por tiempo.

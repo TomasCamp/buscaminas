@@ -23,3 +23,13 @@ select{
     padding: 4px;
     font-size: 19px;
 }
+.message{
+    width: 250px;
+    margin: auto;
+}
+.message p{
+    font-size: 30px;
+}
+.game{
+    margin: 50px auto;
+}
