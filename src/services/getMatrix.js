@@ -14,8 +14,9 @@ export default function getMatrix(LEN) {
         if (matrix[aux1][aux2].simbol !== "B") {
             index.push([aux1, aux2]);
             matrix[aux1][aux2].simbol = "B";
+            bombas--;
         }
-        bombas--;
+        
     }
 
     //Asignar numeros
