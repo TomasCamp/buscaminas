@@ -1,5 +1,7 @@
 export default function getMatrix(LEN) {
-    let matrix = Array.from({length: LEN}, () => Array.from({length: LEN}, () => {return {state: false, simbol: 0}}))
+    let matrix = Array.from({length: LEN}, () => Array.from({length: LEN}, () => {
+        return {state: false, flag: false, simbol: 0}
+    }))
   
     //Generar bombas
     let index = []

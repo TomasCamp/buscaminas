@@ -70,6 +70,13 @@ export default function Game({len, setPlay}) {
         else handleCheck(aux)
     }
 
+    const handleRightClick = (e, i, j) => {
+        e.preventDefault()
+        let newMatrix = [...matrix]
+        newMatrix[i][j].flag = !newMatrix[i][j].flag
+        setMatrix(newMatrix)
+    }
+
     const handleReset = () => {
         setMatrix(getMatrix(len))
         setCheck(0)
@@ -86,12 +93,13 @@ export default function Game({len, setPlay}) {
     return (
         <>
             <section className='game' style={styleMatrix}>
-                {matrix.map((array, i) => {
-                    return array.map( (cell, j) => {
-                        return (
-                            check < 0 ? <Cell key={`${i}${j}`} state={cell.state} simbol={cell.simbol} click={() => {}} />
-                            : <Cell key={`${i}${j}`} state={cell.state} simbol={cell.simbol} click={() => handleCell(i, j)} />
-                        )
+                {matrix.map((row, i) => {
+                    return row.map( (cell, j) => {
+                        return <Cell 
+                        key={`${i}${j}`} 
+                        content={cell} 
+                        click={check >= 0 ? () => handleCell(i, j) : null}
+                        rightClick={check >= 0 ? (e) => handleRightClick(e, i, j) : null} />
                     })
                 })}
             </section>
