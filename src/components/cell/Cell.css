@@ -5,10 +5,25 @@ article{
     font-size: 20px;
 }
 .true {
-    background-color: #555;
+    background-color: #777;
     color: #ccc;
 }
 .false {
     background-color: #aaa;
-    color: #555;
+    color: #777;
+}
+.n1 {
+    color: #33f;
+}
+.n2 {
+    color: #3a3;
+}
+.n3 {
+    color: #f33;
+}
+.n4 {
+    color: #62f;
+}
+.n5 {
+    color: #933;
 }

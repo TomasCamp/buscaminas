@@ -5,10 +5,13 @@ function Cell({content, click, rightClick}) {
     
     
     return( 
-        <article className={`${state}`} 
+        <article className={`${state} ${state? "n"+simbol : " "}`} 
         onClick={!state && !flag ? click : null}
         onContextMenu={!state ? rightClick : null}>
-            {flag ? "F": !state || simbol === 0 ? "": simbol}
+            {flag ? "🚩": 
+            !state || simbol === 0 ? "": 
+            state && simbol === "B" ? "💣" :
+             simbol}
         </article>
     )
 }

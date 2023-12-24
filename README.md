@@ -11,5 +11,4 @@ Este proyecto busca recrear el juego Buscaminas, para ejercitar las siguientes t
 
 ## Lista de tareas:
 - Mostrar todas las bombas.
-- Banderin.
 - Puntaje por tiempo.
